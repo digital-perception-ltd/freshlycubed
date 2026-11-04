@@ -14,7 +14,7 @@
   --sand: #D9B97F;
   --orange: #F8AE1C;
 
-  --display: 'Bodoni Moda', 'Bodoni 72', Didot, Georgia, serif;
+  --display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
   --body: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
   --gutter: clamp(16px, 4vw, 32px);
@@ -50,7 +50,7 @@ h1, h2, h3 {
   margin: 0;
   font-family: var(--display);
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   text-wrap: balance;
 }
 ul, ol { list-style: none; margin: 0; padding: 0; }
@@ -315,7 +315,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   font-style: italic;
   font-size: 30px;
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   transition: color 180ms ease-out;
 }
 .name-strip a:hover .name { color: var(--gold); }
@@ -396,7 +396,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   font-style: italic;
   font-size: clamp(28px, 3.8vw, 46px);
   line-height: 1.18;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 /* ---------- People ---------- */
@@ -412,7 +412,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   border-radius: 50%;
   background: var(--line-soft);
 }
-.portrait figcaption { font-family: var(--display); font-size: clamp(15px, 1.2vw + 10px, 20px); letter-spacing: -0.02em; text-align: center; }
+.portrait figcaption { font-family: var(--display); font-size: clamp(15px, 1.2vw + 10px, 20px); letter-spacing: -0.01em; text-align: center; }
 .portrait--sm figcaption { font-family: var(--body); font-size: 14px; font-weight: 600; letter-spacing: 0; }
 
 .quote-xl {
@@ -421,7 +421,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   font-style: italic;
   font-size: clamp(28px, 3.6vw, 44px);
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 .quote-mark { color: var(--gold); }
 
@@ -441,9 +441,9 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   font-family: var(--display);
   font-size: clamp(24px, 3.4vw, 40px);
   line-height: 1.25;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
-.mission strong { color: var(--sand); font-weight: 500; }
+.mission strong { color: var(--sand); font-weight: 400; }
 
 /* ---------- Big statement band ---------- */
 .statement {
@@ -453,7 +453,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   font-style: italic;
   font-size: clamp(36px, 5.6vw, 72px);
   line-height: 1.02;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 .stack-sm > .statement, .stack > .statement { flex: none; }
 

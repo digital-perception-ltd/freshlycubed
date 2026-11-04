@@ -37,5 +37,5 @@ Until then, submitting the form asks visitors to email hello@freshlycubed.com.
 ## Notes
 
 - Copy and photos come from the current freshlycubed.com site.
-- Fonts: Bodoni Moda (display) and Hanken Grotesk (body), loaded from Google Fonts.
+- Fonts: DM Serif Display (display) and Hanken Grotesk (body), loaded from Google Fonts.
 - Checked at 320, 375, 768, 1024, 1440 and 1920 px wide: no horizontal overflow, no console errors, all images load.
