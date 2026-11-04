@@ -1,6 +1,6 @@
 /* Freshly Cubed — Design A "Botanical"
    Layout: one 1200px editorial column; mint ground, white and forest bands,
-   one brand-orange photo panel per page where the product photo lives. */
+   the product photo sits on white panels; brand orange is kept for small accents. */
 :root {
   --forest: #12312A;
   --mint: #F2F4F0;
@@ -274,8 +274,10 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   aspect-ratio: 4 / 5;
   max-width: 100%;
   overflow: hidden;
-  background: var(--orange);
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
 }
+.bg-paper .photo-panel { background: var(--mint); }
 .photo-panel img { width: 100%; }
 .photo-panel__tag {
   position: absolute;
@@ -330,11 +332,14 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 .serve-grid img {
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
-  background: var(--orange);
+  object-fit: contain;
+  padding: 12%;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
   transition: transform 220ms ease-out;
 }
-.serve-grid li:hover img { transform: translateY(-4px); }
+.serve-grid li:hover img { transform: translateY(-4px); border-color: var(--brass); }
+.bg-paper .serve-grid img { background: var(--mint); }
 .serve-grid span { font-size: 14px; font-weight: 600; }
 .serve-grid--lg { gap: 20px; }
 .serve-grid--lg span { font-size: 16px; font-weight: 700; }
@@ -437,13 +442,46 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   color: var(--gold);
 }
 .mission {
-  max-width: 980px;
-  font-family: var(--display);
-  font-size: clamp(24px, 3.4vw, 40px);
-  line-height: 1.25;
-  letter-spacing: -0.01em;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(28px, 6vw, 96px);
+  align-items: start;
 }
-.mission strong { color: var(--sand); font-weight: 400; }
+.mission__title {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(40px, 5.4vw, 68px);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--sand);
+}
+.mission__title::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin-top: clamp(20px, 3vw, 32px);
+  background: var(--brass);
+}
+.mission__body { padding-top: clamp(0px, 1vw, 10px); }
+.mission__lead {
+  margin: 0 0 clamp(18px, 2.4vw, 28px);
+  font-family: var(--display);
+  font-size: clamp(24px, 2.7vw, 34px);
+  line-height: 1.25;
+  color: var(--mint);
+}
+.mission__text {
+  margin: 0;
+  max-width: 56ch;
+  font-size: clamp(17px, 1.4vw, 19px);
+  line-height: 1.7;
+  color: var(--mist);
+}
+@media (max-width: 760px) {
+  .mission { grid-template-columns: minmax(0, 1fr); }
+}
 
 /* ---------- Big statement band ---------- */
 .statement {
@@ -463,7 +501,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   max-width: 852px;
   margin-inline: auto;
 }
-.cube-band { background: var(--orange); padding-block: clamp(24px, 4vw, 48px); }
+.cube-band { background: var(--paper); border-block: 1px solid var(--line-soft); padding-block: clamp(24px, 4vw, 48px); }
 .spot {
   position: absolute;
   width: 44px;
