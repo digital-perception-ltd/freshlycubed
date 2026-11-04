@@ -119,7 +119,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   text-decoration: none;
   white-space: nowrap;
 }
-.brand svg { flex: none; }
+.brand img { width: auto; height: 44px; }
 .nav-list {
   display: flex;
   flex-wrap: wrap;
@@ -195,7 +195,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 @media (max-width: 400px) {
   .header-row { gap: 12px; }
   .brand { gap: 8px; font-size: 20px; }
-  .brand svg { width: 26px; height: 26px; }
+  .brand img { height: 38px; }
   .nav-toggle { gap: 8px; padding: 0 10px; }
 }
 
@@ -271,31 +271,26 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   position: relative;
   display: grid;
   place-items: center;
-  aspect-ratio: 4 / 5;
+  gap: 20px;
   max-width: 100%;
-  overflow: hidden;
-  background: var(--paper);
-  border: 1px solid var(--line-soft);
+  background: transparent;
 }
-.bg-paper .photo-panel { background: var(--mint); }
 .photo-panel img { width: 100%; }
 .photo-panel__tag {
-  position: absolute;
-  left: 20px;
-  right: 20px;
+  margin: 0;
+  justify-self: start;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--forest);
 }
-.photo-panel__tag--top { top: 20px; }
-.photo-panel__tag--bottom { bottom: 18px; display: flex; flex-wrap: wrap; gap: 6px 14px; }
-.photo-panel--square { aspect-ratio: 1 / 1; }
+.photo-panel__tag--top { color: var(--gold); }
+.photo-panel__tag--bottom { display: flex; flex-wrap: wrap; gap: 6px 14px; }
 
 @media (max-width: 860px) {
   .hero-grid { grid-template-columns: minmax(0, 1fr); }
-  .photo-panel { aspect-ratio: auto; padding-block: 56px 64px; }
+  .photo-panel { gap: 16px; }
 }
 
 /* ---------- Ingredient names strip (home) ---------- */
@@ -333,13 +328,11 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: contain;
-  padding: 12%;
-  background: var(--paper);
-  border: 1px solid var(--line-soft);
+  padding: 8%;
+  background: transparent;
   transition: transform 220ms ease-out;
 }
-.serve-grid li:hover img { transform: translateY(-4px); border-color: var(--brass); }
-.bg-paper .serve-grid img { background: var(--mint); }
+.serve-grid li:hover img { transform: translateY(-4px); }
 .serve-grid span { font-size: 14px; font-weight: 600; }
 .serve-grid--lg { gap: 20px; }
 .serve-grid--lg span { font-size: 16px; font-weight: 700; }
@@ -501,7 +494,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   max-width: 852px;
   margin-inline: auto;
 }
-.cube-band { background: var(--paper); border-block: 1px solid var(--line-soft); padding-block: clamp(24px, 4vw, 48px); }
+.cube-band { background: transparent; padding-block: clamp(24px, 4vw, 48px); }
 .spot {
   position: absolute;
   width: 44px;
@@ -626,7 +619,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 .site-footer { border-top: 1px solid var(--line); padding-block: 56px 32px; }
 .footer-row { display: flex; flex-wrap: wrap; gap: 32px 48px; justify-content: space-between; align-items: flex-start; }
 .footer-brand { flex: 1 1 260px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
-.footer-brand img { width: 150px; }
+.footer-brand img { width: 180px; }
 .footer-email { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
 .footer-nav { flex: 0 1 220px; display: flex; flex-direction: column; font-size: 15px; }
 .footer-nav a { display: inline-flex; align-items: center; min-height: 36px; color: var(--sage); text-decoration: none; }
